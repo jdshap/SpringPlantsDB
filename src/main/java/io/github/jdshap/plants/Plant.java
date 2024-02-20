@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 @Entity
 public class Plant{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String sku;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     @Column(name="common_name")
     private String commonName;
     private String family;
@@ -16,11 +16,11 @@ public class Plant{
     private short waterInterval;
     private short price;
 
-    public String getSku() {
-        return sku;
+    public int getId() {
+        return id;
     }
-    public void setSku(String sku) {
-        this.sku = sku;
+    public void setId(int id) {
+        this.id = id;
     }
     public String getCommonName() {
         return commonName;
